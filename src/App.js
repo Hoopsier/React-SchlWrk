@@ -1,22 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import Laskuri from './Laskuri';
+import Viesti from './Viesti';
+import React, { useState } from "react";
+import Posts from './Posts';
+const App = () => {
+  const [showLaskuri, setShowLaskuri] = useState(false);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hello, World!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Posts />
+
+        {showLaskuri && <Laskuri />}
+        {showLaskuri && <button onClick={() => setShowLaskuri(false)}>Piilota Laskuri</button>}
+        {!showLaskuri && <button onClick={() => setShowLaskuri(true)}>Näytä Laskuri</button>}
+
+        <Viesti teksti="This is a message"></Viesti>
+        <Viesti teksti_2="This is another message"></Viesti>
       </header>
     </div>
   );
