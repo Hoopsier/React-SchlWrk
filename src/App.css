@@ -11,6 +11,17 @@
   border-color: blueviolet;
   margin-bottom: 2%;
 }
+.customerDetails {
+  background-color: #353a46;
+  color:rgb(37, 180, 180);
+  border-style: solid;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 50px;
+  border-radius: 30px;
+  padding-left: 2%;
+  font-size: 12px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
