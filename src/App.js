@@ -4,6 +4,7 @@ import Viesti from './Viesti';
 import React, { useState } from "react";
 import Posts from './Posts';
 import CustomerList from './CustomerList';
+
 const App = () => {
   const [showLaskuri, setShowLaskuri] = useState(false);
   return (
@@ -12,13 +13,13 @@ const App = () => {
         <p>
           Hello, World!
         </p>
-        <CustomerList />
+
         <Posts />
 
         {showLaskuri && <Laskuri />}
         {showLaskuri && <button onClick={() => setShowLaskuri(false)}>Piilota Laskuri</button>}
         {!showLaskuri && <button onClick={() => setShowLaskuri(true)}>Näytä Laskuri</button>}
-
+        <CustomerList />
         <Viesti teksti="This is a message"></Viesti>
         <Viesti teksti_2="This is another message"></Viesti>
       </header>
