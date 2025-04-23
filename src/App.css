@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #353a46;
+  color: #61dafb;
+}
 .App {
   text-align: center;
 }
@@ -25,9 +31,10 @@
 .nappi {
   border-radius: 10px;
   margin-left: 10px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   font-size: 26px;
   background-color: #353a46;
-  color:rgb(37, 180, 180);
+  color:rgb(64, 245, 255);
 }
 .neg {
   color: red;

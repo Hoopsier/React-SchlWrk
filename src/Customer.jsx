@@ -2,19 +2,20 @@ import './App.css'
 import React, { useState } from 'react'
 import CustomerService from './services/customer'
 
-const Customer = ({ customer, reload, reloadNow }) => {
-        const [showDetails, setShowDetails] = useState(false)
 
+const Customer = ({ customer, editCustomer, reload, reloadNow }) => {
+        const [showDetails, setShowDetails] = useState(false)
+        
 
         return (
                 <div>
                         <h4 onClick={() => setShowDetails(!showDetails)}>
                                 {customer.companyName}
                         </h4>
-                        <button onClick={() => CustomerService.remove(customer)}>Delete</button>
                         {showDetails && <div className="customerDetails">
                                 <h3>{customer.companyName}</h3>
-
+                                <button onClick={() => editCustomer(customer)}>Edit</button>
+                                <button onClick={() => CustomerService.remove(customer)}>Delete</button>
                                 <table>
                                         <thead>
                                                 <tr>
